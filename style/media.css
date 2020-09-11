@@ -1,13 +1,4 @@
-@media (min-width: 850px) {
-  .button-menu {
-    display: none;
-  }
-}
-
 @media (max-width: 850px) {
-  .button-menu {
-    display: none;
-  }
   .container {
     width: 100%;
   }
@@ -271,15 +262,68 @@
 @media screen and (max-width: 600px) {
   .navigation {
     display: none;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #fff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .navigation .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navigation .nav_list {
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px;
+    position: relative;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  .navigation .nav_list a {
+    color: #100F1D;
+  }
+  .navigation .nav_list a:hover::after {
+    opacity: 1;
+  }
+  .navigation .nav_list a::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    opacity: 0;
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
   }
   .header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-left: 50px;
+    position: relative;
   }
-  .button-menu {
+  .button-menu_open {
     display: block;
+    margin-right: 30px;
+  }
+  .button-menu_open span {
+    font-size: 45px;
+  }
+  .button-menu_close {
+    display: none;
     margin-right: 30px;
   }
   /*** greeting ***/

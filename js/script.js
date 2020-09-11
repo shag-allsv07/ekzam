@@ -1,3 +1,4 @@
+// valadation form 
 let name = document.querySelector("#name");
 let email = document.querySelector("#email");
 let phone = document.querySelector("#phone");
@@ -68,3 +69,24 @@ window.onload = function() {
     });
 
 }
+// validation form end
+
+// open menu
+
+let nav = document.querySelector("#navigation");
+let btnMenuOpen = document.getElementById("button-menu_open");
+let btnMenuClose = document.getElementById("button-menu_close");
+
+btnMenuOpen.addEventListener('click', function() {
+    nav.style.display = "block";
+    btnMenuOpen.style.display = "none";
+    btnMenuClose.style.display = "block";
+});
+
+btnMenuClose.addEventListener('click', function() {
+    nav.style.dispaly = "none";
+    btnMenuClose.style.display = "none";
+    btnMenuOpen.style.display = "block";
+});
+
+// open menu end
