@@ -1,0 +1,443 @@
+/* setting */
+html
+    box-sizing: border-box
+*
+    padding: 0
+    margin: 0
+    font-family: 'Garamond'
+
+*,*::after, *::before 
+    box-sizing: inherit
+
+ul,li,a  
+    list-style: none
+    text-decoration: none
+    
+.error 
+    color: #fc5757
+    font-size: 12px
+    margin-top: 5px
+
+/* font */
+@font-face 
+    font-family: 'Garamond'
+    src: url(../fonts/garamond_[allfont.ru].ttf)
+
+
+/* style */
+/*** header ***/
+.container 
+    width: 1100px
+    margin: 0 auto
+.header
+    width: 100%
+    height: 50px
+    display: flex
+    align-items: center
+
+.logo
+    margin-left: 50px
+    min-width: 150px
+    a
+        &:active
+            color: #202020
+        h1
+            color: #202020
+            font-size: 18px
+
+.navigation
+    min-width: 350px
+    margin-left: 50px
+    margin-right: 50px
+    .nav
+        &_list
+            display: inline-block
+            padding: 5px 10px
+            position: relative
+            a
+                color: #100F1D
+                &:hover::after
+                    opacity: 1
+                &::after
+                    content: ""
+                    position: absolute
+                    top: 90%
+                    left: 0
+                    height: 2px
+                    width: 100%
+                    background-color: #000
+                    opacity: 0
+                    transition: 0.6s ease
+
+.social-icons
+    margin-right: 50px
+    display: flex
+    justify-content: flex-end
+    width: 100%
+    .social
+        .social_icon
+            display: inline-block
+            padding: 5px 10px
+            cursor: pointer 
+            img
+                width: 20px
+                height: 20px
+
+.button-menu
+    cursor: pointer
+    ul
+        display: flex
+        flex-direction: column
+        li
+            width: 15px
+            height: 3px
+            background-color: #202020
+            margin-top: 2px
+            margin-bottom: 1px
+
+    /*** greeting ***/
+.greeting
+    height: 75vh
+    display: flex
+    &_block-desc
+        border-top: 2px solid #F2F2F2
+        width: 55%
+        padding-top: 70px
+        padding-left: 70px
+        padding-right: 70px
+        h3
+            font-size: 35px
+            margin-bottom: 20px
+            font-weight: lighter
+        .first-text
+            font-size: 18px
+            margin-bottom: 10px
+        .second-text
+            font-size: 15px
+            color: #3C4048
+    &_block-img
+        width: 45%
+        img
+            width: 100%
+            height: 100%
+.btn
+    border: 1px solid #D9D9D9
+    border-top: 2px solid #D9D9D9
+    border-radius: 3px
+    background-color: #fff
+    padding: 10px 20px
+    margin-top: 40px
+    text-transform: uppercase
+    color: #8294AB
+    font-size: 16px
+    cursor: pointer
+    transition: all ease 0.5s
+    &:hover
+        background-color: #D9D9D9
+
+    /*** story ***/
+.story
+    display: flex
+    &_block-img
+        width: 35%
+        img
+            width: 100%
+            height: 100%
+    &_block-desc
+        width: 65%
+        border-top: 2px solid #F2F2F2
+        margin-bottom: -2px
+        padding-top: 80px
+        padding-left: 70px
+        padding-right: 70px
+        h3
+            font-size: 35px
+            margin-bottom: 20px
+            font-weight: lighter
+        .text
+            font-size: 18px
+            margin-bottom: 10px
+    
+    /*** story-two ***/
+.story-two
+    display: flex
+    &_block-desc
+        width: 70%
+        border-top: 2px solid #F2F2F2
+        border-bottom: 1px solid #F2F2F2
+        padding-top: 80px
+        padding-left: 70px
+        padding-right: 70px
+        h3
+            font-size: 35px
+            margin-bottom: 20px
+            font-weight: lighter
+        .text
+            font-size: 18px
+            margin-bottom: 10px
+    &_block-img
+        width: 30%
+        img
+            width: 100%
+            height: 100%
+
+    /*** gallery ***/
+.gallery
+    margin-top: 30px
+    position: relative
+    display: flex
+    flex-direction: column
+    h3
+        margin-bottom: 30px
+        font-size: 35px
+        text-align: center
+        font-weight: lighter
+    .gallery_block
+        height: 200px
+        display: flex
+        justify-content: space-between
+        .gall
+            position: relative
+            transition: all 0.5s ease
+            width: 25%
+            &__items
+                top: 0
+                left: 0
+                position: absolute
+                width: 100%
+                height: 100%
+                background-color: rgba(0,0,0,0.7)
+                color: #fff
+                opacity: 0
+                transition: all 0.25s
+                text-align: center
+                span
+                    display: block
+                    width: 100%
+                    position: relative
+                    font-size: 20px
+                    color: #ffffff
+                    top: 20%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                p
+                    display: block
+                    width: 80%
+                    padding: 5px 15px
+                    position: relative
+                    font-size: 15px
+                    color: #ffffff
+                    top: 40%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                a
+                    display: block
+                    width: 100px
+                    padding: 10px 15px
+                    position: relative
+                    font-size: 15px
+                    color: #ffffff
+                    text-transform: uppercase
+                    border: 1px solid #ffffff
+                    border-radius: 5px
+                    top: 40%
+                    left: 50%
+                    transform: translate(-50%,-50%)
+                    transition: all 0.5s ease
+                    &:hover
+                        border-radius: 0
+            &:hover .gall__items
+                opacity: 0.7
+            img
+                width: 100%
+                height: 100%
+    .prew, .next
+        position: absolute
+        top: 60%
+        width: auto
+        margin-top: -22px
+        padding: 16px
+        color: #ffffff
+        font-weight: bold
+        font-size: 18px
+        transition: 0.6s ease 
+        border-radius: 0 3px 3px 0 
+        background-color: rgba(0, 0, 0, 0.5)
+        cursor: pointer
+        &:hover
+            background-color: rgba(0, 0, 0, 0.8)
+    .next
+        right: 0
+        border-radius: 3px 0 0 3px
+                
+
+    /*** features ***/
+.features
+    margin-top: 50px
+    h3
+        margin-bottom: 30px
+        font-size: 35px
+        text-align: center
+        font-weight: lighter
+    .features-block
+        display: flex
+        align-content: center
+        flex-wrap: wrap
+        margin: 0 30px 
+        .feature
+            display: flex
+            flex-direction: column
+            width: 33%
+            border-bottom: 2px solid #CBCBCB
+            border-right: 2px solid #CBCBCB
+            padding: 40px 30px
+            &:nth-child(3)
+                border-right: none
+            &:nth-child(4)
+                border-bottom: none
+            &:nth-child(5)
+                border-bottom: none
+            &:nth-child(6)
+                border-right: none
+                border-bottom: none
+            &_img   
+                text-align: center
+                margin-bottom: 15px
+            &_name
+                text-align: center
+                margin-bottom: 15px
+            &_text
+                text-align: center
+
+    /*** write ***/
+.write 
+    margin-top: 50px
+    display: flex
+    flex-direction: column
+    padding-bottom: 30px
+    border-bottom: 2px solid #F3F3F3
+    h3
+        margin-bottom: 30px
+        font-size: 35px
+        text-align: center
+        font-weight: lighter
+    .form-write
+        width: 66.6%
+        margin: 0 auto
+
+.contact
+    display: flex
+    margin-bottom: 20px
+    label
+        font-weight: bold
+    input
+        margin-top: 5px
+        margin-right: 10px
+        height: 30px
+        width: 259px
+        border: 1px solid #E5E5E5
+        border-radius: 5px
+        padding: 4px 10px
+        &:focus
+            outline: none
+            border: 1px solid #c9c9c9
+    span
+        
+        
+.contact-me
+    margin-bottom: 20px
+    span
+        margin-right: 10px
+        font-weight: bold
+    input
+        margin-right: 10px
+        margin-left: 10px
+
+.topic
+    position: relative
+    margin-bottom: 20px
+    label
+        font-weight: bold
+    &::after
+        content: ""
+        display: block
+        border-style: solid
+        border-width: 6px 5px 0 5px
+        border-color: #222222 transparent transparent transparent
+        position: absolute
+        top: 70%
+        right: 10px
+        z-index: 1
+    .select
+        margin-top: 5px
+        width: 100%
+        height: 30px
+        padding: 4px 10px
+        border: 1px solid #E5E5E5
+        border-radius: 5px
+        background: none
+        appearance: none
+        &:focus
+            outline: none
+            border: 1px solid #c9c9c9
+
+.message
+    margin-bottom: 10px
+    label
+        font-weight: bold
+    textarea
+        margin-top: 5px
+        width: 100%
+        height: 100px
+        border-radius: 5px
+        border: 1px solid #E5E5E5
+        &:focus
+            outline: none
+            border: 1px solid #c9c9c9
+
+.block-button
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .chekbox
+        label
+            font-weight: bold
+
+
+.button
+    border: 1px solid #D9D9D9
+    border-top: 2px solid #D9D9D9
+    border-radius: 3px
+    background-color: #fff
+    padding: 10px 20px
+    text-transform: uppercase
+    color: #8294AB
+    font-size: 16px
+    cursor: pointer
+    transition: all ease 0.5s
+    &:hover
+        background-color: #D9D9D9
+
+    /*** footer ***/
+.footer
+    margin-top: 30px
+    &_social-icons
+        display: flex
+        justify-content: center
+        .social_icon
+            display: inline-block
+            padding: 5px 7px
+            cursor: pointer 
+            border: 1px solid #464646
+            border-radius: 50%
+            transition: 0.6s ease
+            &:hover
+                background-color: #e6e6e6
+            img
+                width: 20px
+                height: 20px
+    .copirite
+        display: flex
+        justify-content: center
+        margin-top: 20px
+        margin-bottom: 10px

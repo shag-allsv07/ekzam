@@ -1,0 +1,422 @@
+@media (min-width: 850px)
+    .button-menu
+        display: none
+    
+
+@media (max-width: 850px)
+    .button-menu
+        display: none
+    .container
+        width: 100%
+    .header
+        justify-content: center
+
+    .social-icons
+        display: none
+
+@media screen and (min-width: 601px) and (max-width: 849px)
+    /*** greeting ***/
+    .greeting
+        &_block-desc
+            width: 50%
+            padding-top: 30px
+            padding-left: 40px
+            padding-right: 40px
+            h3
+                font-size: 22px
+            .first-text
+                font-size: 16px
+            .second-text
+                font-size: 13px
+        &_block-img
+            width: 50%
+
+    /*** story ***/
+    .story
+        &_block-img
+            width: 50%
+        &_block-desc
+            width: 50%
+            padding-top: 30px
+            padding-left: 40px
+            padding-right: 40px
+            h3
+                font-size: 22px
+            .text
+                font-size: 16px
+    /*** story-two ***/
+    .story-two
+        &_block-desc
+            width: 50%
+            padding-top: 30px
+            padding-left: 40px
+            padding-right: 40px
+            h3
+                font-size: 22px
+            .text
+                font-size: 16px
+                margin-bottom: 10px
+        &_block-img
+            width: 50%
+    
+    /*** gallery ***/
+    .gallery
+        .gallery_block
+            .gall
+                width: 50%
+                span
+                    font-size: 16px
+                p
+                    font-size: 13px
+                a
+                    padding: 5px 10px
+                    font-size: 12px
+                img
+                    width: 100%
+
+    /*** features ***/
+    .features
+        h3
+            margin-bottom: 30px
+            font-size: 35px
+            text-align: center
+            font-weight: lighter
+        .features-block
+            display: flex
+            align-content: center
+            flex-wrap: wrap
+            margin: 0 30px 
+            .feature
+                display: flex
+                flex-direction: column
+                width: 50%
+                border-bottom: 1px solid #CBCBCB
+                border-right: 1px solid #CBCBCB
+                padding: 40px 30px
+                &:nth-child(2)
+                    border-right: none
+                &:nth-child(3)
+                    border-right: 1px solid #CBCBCB
+                &:nth-child(4)
+                    border-right: none
+                    border-bottom: 1px solid #CBCBCB
+                &:nth-child(5)
+                    border-bottom: none
+                &:nth-child(6)
+                    border-right: none
+                    border-bottom: none
+                &_img   
+                    text-align: center
+                    margin-bottom: 15px
+                &_name
+                    text-align: center
+                    margin-bottom: 15px
+                &_text
+                    text-align: center
+
+    /*** write ***/
+    .write 
+        margin-top: 30px
+        h3
+            margin-bottom: 20px
+            font-size: 22px
+        .form-write
+            width: 90%
+            margin: 0 auto
+
+    .contact
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+        label
+            font-weight: bold
+        input
+            margin: 0 0 10px 0
+            height: 30px
+            width: 100%
+            border: 1px solid #E5E5E5
+            border-radius: 5px
+            padding: 4px 10px
+            &:focus
+                outline: none
+                border: 1px solid #c9c9c9
+            
+    .contact-me
+        margin-bottom: 20px
+        span
+            margin-right: 10px
+            font-weight: bold
+        input
+            margin-right: 10px
+            margin-left: 10px
+
+    .topic
+        position: relative
+        margin-bottom: 20px
+        label
+            font-weight: bold
+        &::after
+            content: ""
+            display: block
+            border-style: solid
+            border-width: 6px 5px 0 5px
+            border-color: #222222 transparent transparent transparent
+            position: absolute
+            top: 70%
+            right: 10px
+            z-index: 1
+        .select
+            margin-top: 5px
+            width: 100%
+            height: 30px
+            padding: 4px 10px
+            border: 1px solid #E5E5E5
+            border-radius: 5px
+            background: none
+            appearance: none
+            &:focus
+                outline: none
+                border: 1px solid #c9c9c9
+
+    .message
+        margin-bottom: 10px
+        label
+            font-weight: bold
+        textarea
+            margin-top: 5px
+            width: 100%
+            height: 100px
+            border-radius: 5px
+            border: 1px solid #E5E5E5
+            &:focus
+                outline: none
+                border: 1px solid #c9c9c9
+
+    .block-button
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .chekbox
+            label
+                font-weight: bold
+
+
+    .btn
+        margin-top: 20px
+        padding: 5px 10px
+
+
+@media screen and (max-width: 600px)
+    .navigation
+        display: none
+    .header
+        justify-content: space-between
+        padding-left: 50px
+    .button-menu
+        display: block
+        margin-right: 30px
+
+    /*** greeting ***/
+    .greeting
+        height: 100%
+        display: flex
+        flex-direction: column-reverse
+        margin-bottom: 30px
+        &_block-desc
+            border: none
+            width: 100%
+            padding-top: 30px
+            padding-left: 40px
+            padding-right: 40px
+            h3
+                font-size: 22px
+            .first-text
+                font-size: 16px
+            .second-text
+                font-size: 13px
+        &_block-img
+            margin-top: 5px
+            width: 100%
+            img
+                height: 500px
+
+    /*** story ***/
+    .story
+        display: flex
+        flex-direction: column
+        margin-bottom: 30px
+        &_block-img
+            width: 100%
+        &_block-desc
+            border: none
+            width: 100%
+            padding-top: 30px
+            padding-left: 40px
+            padding-right: 40px
+            h3
+                font-size: 22px
+            .text
+                font-size: 16px
+    /*** story-two ***/
+    .story-two
+        display: flex
+        flex-direction: column-reverse
+        margin-bottom: 30px
+        &_block-desc
+            border: none
+            width: 100%
+            padding-top: 30px
+            padding-left: 40px
+            padding-right: 40px
+            h3
+                font-size: 22px
+            .text
+                font-size: 16px
+                margin-bottom: 10px
+        &_block-img
+            width: 100%
+
+    /*** gallery ***/
+    .gallery
+        .gallery_block
+            .gall
+                width: 50%
+                img
+                    width: 100%
+
+    /*** features ***/
+    .features
+        h3
+            margin-bottom: 30px
+            font-size: 35px
+            text-align: center
+            font-weight: lighter
+        .features-block
+            display: flex
+            align-content: center
+            flex-wrap: wrap
+            margin: 0 30px 
+            .feature
+                display: flex
+                flex-direction: column
+                width: 100%
+                border-bottom: 1px solid #CBCBCB
+                border-right: none
+                padding: 40px 30px
+                &:nth-child(2)
+                    border-bottom: 1px solid #CBCBCB
+                &:nth-child(3)
+                    border-bottom: 1px solid #CBCBCB
+                &:nth-child(4)
+                    border-bottom: 1px solid #CBCBCB
+                &:nth-child(5)
+                    border-bottom: 1px solid #CBCBCB
+                &:nth-child(6)
+                    border-bottom: 1px solid #CBCBCB
+                &_img   
+                    text-align: center
+                    margin-bottom: 15px
+                &_name
+                    text-align: center
+                    margin-bottom: 15px
+                &_text
+                    text-align: center
+
+    /*** write ***/
+    .write 
+        margin-top: 30px
+        h3
+            margin-bottom: 20px
+            font-size: 22px
+        .form-write
+            width: 90%
+            margin: 0 auto
+
+    .contact
+        display: flex
+        flex-direction: column
+        margin-bottom: 20px
+        label
+            font-weight: bold
+        input
+            margin: 0 0 10px 0
+            height: 30px
+            width: 100%
+            border: 1px solid #E5E5E5
+            border-radius: 5px
+            padding: 4px 10px
+            &:focus
+                outline: none
+                border: 1px solid #c9c9c9
+            
+    .contact-me
+        margin-bottom: 20px
+        span
+            margin-right: 10px
+            font-weight: bold
+        input
+            margin-right: 10px
+            margin-left: 10px
+
+    .topic
+        position: relative
+        margin-bottom: 20px
+        label
+            font-weight: bold
+        &::after
+            content: ""
+            display: block
+            border-style: solid
+            border-width: 6px 5px 0 5px
+            border-color: #222222 transparent transparent transparent
+            position: absolute
+            top: 70%
+            right: 10px
+            z-index: 1
+        .select
+            margin-top: 5px
+            width: 100%
+            height: 30px
+            padding: 4px 10px
+            border: 1px solid #E5E5E5
+            border-radius: 5px
+            background: none
+            appearance: none
+            &:focus
+                outline: none
+                border: 1px solid #c9c9c9
+
+    .message
+        margin-bottom: 10px
+        label
+            font-weight: bold
+        textarea
+            margin-top: 5px
+            width: 100%
+            height: 100px
+            border-radius: 5px
+            border: 1px solid #E5E5E5
+            &:focus
+                outline: none
+                border: 1px solid #c9c9c9
+
+    .block-button
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .chekbox
+            label
+                font-weight: bold
+
+
+    .btn
+        margin-top: 20px
+        padding: 10px 20px
+
+
+@media (max-width: 400px)
+    .header
+        justify-content: space-between
+        padding-left: 0
+        .logo
+            min-width: 100px
