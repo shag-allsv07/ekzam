@@ -260,8 +260,14 @@
 }
 
 @media screen and (max-width: 600px) {
+  .logo {
+    margin-left: 20px;
+  }
   .navigation {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    height: 100vh;
+    width: 100%;
     margin: 0;
     width: 100%;
     position: absolute;
@@ -272,6 +278,7 @@
     transition: all 0.5s ease;
   }
   .navigation .nav {
+    margin-top: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -292,6 +299,7 @@
   }
   .navigation .nav_list a {
     color: #100F1D;
+    font-size: 18px;
   }
   .navigation .nav_list a:hover::after {
     opacity: 1;
@@ -315,16 +323,30 @@
     padding-left: 50px;
     position: relative;
   }
-  .button-menu_open {
+  .mobile-menu {
     display: block;
-    margin-right: 30px;
+    margin-right: 20px;
   }
-  .button-menu_open span {
-    font-size: 45px;
+  .mobile-menu .menu-active span {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    height: 0;
   }
-  .button-menu_close {
-    display: none;
-    margin-right: 30px;
+  .mobile-menu .menu-active span::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .mobile-menu .menu-active span::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .menu-active {
+    visibility: visible;
+    opacity: 1;
   }
   /*** greeting ***/
   .greeting {
@@ -607,6 +629,7 @@
   }
   .header .logo {
     min-width: 100px;
+    margin-left: 20px;
   }
 }
 /*# sourceMappingURL=media.css.map */

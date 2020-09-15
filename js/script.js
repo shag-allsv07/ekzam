@@ -1,13 +1,13 @@
-// valadation form 
-let name = document.querySelector("#name");
-let email = document.querySelector("#email");
-let phone = document.querySelector("#phone");
-let text = document.querySelector("#text");
-let chbox = document.querySelector("#checkbox_1");
-let btn = document.querySelector(".button");
-
-
 window.onload = function() {
+
+    // valadation form 
+    let name = document.querySelector("#name");
+    let email = document.querySelector("#email");
+    let phone = document.querySelector("#phone");
+    let text = document.querySelector("#text");
+    let chbox = document.querySelector("#checkbox_1");
+    let btn = document.querySelector(".button");
+
     btn.addEventListener('click', function(event) {
         if (name.value == "" || email.value == "" || phone.value == "" || text.value == "") {
             event.preventDefault();
@@ -67,26 +67,16 @@ window.onload = function() {
             }
         }
     });
+    // validation form end
 
+    //media menu
+    let menuBtn = document.getElementById("menu-btn");
+    let navMenu = document.getElementById("navigation");
+
+    menuBtn.addEventListener('click', function(event) {
+        event.preventDefault();
+        this.classList.toggle("menu-active");
+        navMenu.classList.toggle("menu-active");
+    });
+    // media menu end
 }
-// validation form end
-
-// open menu
-
-let nav = document.querySelector("#navigation");
-let btnMenuOpen = document.getElementById("button-menu_open");
-let btnMenuClose = document.getElementById("button-menu_close");
-
-btnMenuOpen.addEventListener('click', function() {
-    nav.style.display = "block";
-    btnMenuOpen.style.display = "none";
-    btnMenuClose.style.display = "block";
-});
-
-btnMenuClose.addEventListener('click', function() {
-    nav.style.dispaly = "none";
-    btnMenuClose.style.display = "none";
-    btnMenuOpen.style.display = "block";
-});
-
-// open menu end

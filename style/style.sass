@@ -83,22 +83,53 @@ ul,li,a
                 width: 20px
                 height: 20px
 
-.button-menu_open
-    cursor: pointer
+.mobile-menu
     display: none
-    ul
-        display: flex
-        flex-direction: column
-        li
-            width: 15px
-            height: 3px
-            background-color: #202020
-            margin-top: 2px
-            margin-bottom: 1px
+    .menu-btn
+        position: relative
+        display: block
+        width: 40px
+        height: 40px
+        border: 1px solid #afafaf
+        border-radius: 3px
+        span
+            display: block
+            width: 20px
+            height: 2px
+            background-color: #333333
+            position: absolute
+            top: 50%
+            left: 50%
+            margin-left: -10px
+            margin-top: -1px
+            transition: 0.2s
+            &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 2px
+                background-color: #333333
+                transform: translateY(-5px)
+                position: absolute
+                top: 50%
+                left: 50%
+                margin-left: -10px
+                margin-top: -1px
+                transition: 0.2s
+            &::after
+                content: ''
+                display: block
+                width: 20px
+                height: 2px
+                background-color: #333333
+                transform: translateY(5px)
+                position: absolute
+                top: 50%
+                left: 50%
+                margin-left: -10px
+                margin-top: -1px
+                transition: 0.2s
 
-.button-menu_close
-    cursor: pointer
-    display: none
 
     /*** greeting ***/
 .greeting

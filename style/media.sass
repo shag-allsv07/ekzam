@@ -200,9 +200,13 @@
 
 
 @media screen and (max-width: 600px)
-    
+    .logo
+        margin-left: 20px
     .navigation
-        display: none
+        visibility: hidden
+        opacity: 0
+        height: 100vh
+        width: 100%
         margin: 0
         width: 100%
         position: absolute
@@ -211,6 +215,7 @@
         background-color: #fff
         transition: all 0.5s ease
         .nav
+            margin-top: 20px
             display: flex
             flex-direction: column
             align-items: center
@@ -222,6 +227,7 @@
                 border-bottom: 1px solid #F2F2F2
                 a
                     color: #100F1D
+                    font-size: 18px
                     &:hover::after
                         opacity: 1
                     &::after
@@ -238,15 +244,25 @@
         justify-content: space-between
         padding-left: 50px
         position: relative
-    .button-menu_open
-        display: block
-        margin-right: 30px
-        span
-            font-size: 45px
 
-    .button-menu_close
-        display: none
-        margin-right: 30px
+    .mobile-menu
+        display: block
+        margin-right: 20px
+        .menu-btn
+        .menu-active
+            span
+                transition: 0.2s
+                height: 0
+                &::before
+                    transform: rotate(45deg)
+                    transition: 0.2s
+                &::after
+                    transform: rotate(-45deg)
+                    transition: 0.2s
+
+    .menu-active
+        visibility: visible
+        opacity: 1
     /*** greeting ***/
     .greeting
         height: 100%
@@ -451,3 +467,4 @@
         padding-left: 0
         .logo
             min-width: 100px
+            margin-left: 20px

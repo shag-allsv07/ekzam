@@ -119,33 +119,66 @@ ul, li, a {
   height: 20px;
 }
 
-.button-menu_open {
-  cursor: pointer;
-  display: none;
-}
-
-.button-menu_open ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.button-menu_open ul li {
-  width: 15px;
-  height: 3px;
-  background-color: #202020;
-  margin-top: 2px;
-  margin-bottom: 1px;
-}
-
-.button-menu_close {
-  cursor: pointer;
+.mobile-menu {
   display: none;
   /*** greeting ***/
+}
+
+.mobile-menu .menu-btn {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #afafaf;
+  border-radius: 3px;
+}
+
+.mobile-menu .menu-btn span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mobile-menu .menu-btn span::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333333;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mobile-menu .menu-btn span::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #333333;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -1px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .greeting {
