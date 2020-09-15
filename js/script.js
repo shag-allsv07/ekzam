@@ -79,4 +79,7 @@ window.onload = function() {
         navMenu.classList.toggle("menu-active");
     });
     // media menu end
+
+    // slider
+    // end slider
 }

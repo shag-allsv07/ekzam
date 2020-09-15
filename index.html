@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUR-GIUDE</title>
+    <!-- slick -->
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <!-- slick end -->
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/media.css">
+    <script src="js/jQuery-v3.5.1.js"></script>
 </head>
 
 <body>
@@ -283,6 +288,16 @@
         </div>
     </div>
 
+    <script src="slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.gallery_block').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplaySpeed: 2000,
+      });
+        });
+    </script>
     <script src="js/script.js"></script>
 </body>
 
