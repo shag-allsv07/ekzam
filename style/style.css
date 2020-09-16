@@ -24,7 +24,6 @@ ul, li, a {
 .error {
   color: #fc5757;
   font-size: 12px;
-  margin-top: 5px;
 }
 
 /* font */
@@ -321,6 +320,7 @@ ul, li, a {
 
 .gallery h3 {
   margin-bottom: 30px;
+  font-size: 35px;
   text-align: center;
 }
 
@@ -442,11 +442,13 @@ ul, li, a {
 .gallery_block .slick-prev {
   left: 0;
   background: url("../images/sl-arrow_l.svg") 0 0/80% no-repeat;
+  outline: none;
 }
 
 .gallery_block .slick-next {
   right: 0;
   background: url("../images/sl-arrow_r.svg") 0 0/80% no-repeat;
+  outline: none;
 }
 
 .features {
