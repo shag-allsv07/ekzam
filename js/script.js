@@ -8,8 +8,41 @@ window.onload = function() {
     let chbox = document.querySelector("#checkbox_1");
     let btn = document.querySelector(".button");
 
+    function checkingForSymbol() {
+        let symbol = phone.value.substring(0,1);
+        if (symbol == "+") {
+            let res = phone.value.substr(1);
+            return res;
+        }
+        return phone.value;  
+    }
+
+    
+    function checkingForNumber() {
+        phoneArr = checkingForSymbol().split("");
+        let phoneNumber = [];
+        for (let i = 0; i < phoneArr.length; i++) {
+            if (!isNaN(phoneArr[i])) {
+                phoneNumber[i] = true;
+            }
+            else {
+                phoneNumber[i] = false;
+            }
+        }
+        return phoneNumber;
+    }
+
+    let otvet = true;
+    for (let i = 0; i < checkingForNumber().length; i++) {
+        if (checkingForNumber()[i] != true) {
+            otvet = false;
+            break;
+        }
+    }
+
+
     btn.addEventListener('click', function(event) {
-        if (name.value == "" || email.value == "" || phone.value == "" || text.value == "") {
+        if (name.value == "" || email.value == "" || phone.value == "" || text.value == "" || chbox != true || otvet != true) {
             event.preventDefault();
 
             let errorMessage = "";
@@ -41,11 +74,20 @@ window.onload = function() {
                 phone.style.border = "1px solid #fc5757";
                 document.querySelector("#error-phone").innerHTML = errorMessage;
                 document.querySelector("#error-phone").classList.add("error");
-            } else {
+            } 
+            else if (otvet == false) {
+                errorMessage = "Phone is not correct";
+                phone.style.border = "1px solid #fc5757";
+                document.querySelector("#error-phone").innerHTML = errorMessage;
+                document.querySelector("#error-phone").classList.add("error");
+            }
+            else {
                 phone.style.border = "";
                 document.querySelector("#error-phone").innerHTML = "";
                 document.querySelector("#error-phone").classList.remove("error");
             }
+            
+
 
             if (text.value == "") {
                 errorMessage = "Enter text";
@@ -80,6 +122,4 @@ window.onload = function() {
     });
     // media menu end
 
-    // slider
-    // end slider
 }
