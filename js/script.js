@@ -14,8 +14,9 @@ window.onload = function() {
             let res = phone.value.substr(1);
             return res;
         }
-        return phone.value;  
+        return phone.value; 
     }
+    console.log(checkingForSymbol()); 
 
     
     function checkingForNumber() {
@@ -32,6 +33,8 @@ window.onload = function() {
         return phoneNumber;
     }
 
+    console.log(checkingForNumber());
+
     let otvet = true;
     for (let i = 0; i < checkingForNumber().length; i++) {
         if (checkingForNumber()[i] != true) {
@@ -39,6 +42,9 @@ window.onload = function() {
             break;
         }
     }
+
+    console.log(otvet);
+
 
 
     btn.addEventListener('click', function(event) {
