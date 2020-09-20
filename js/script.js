@@ -1,3 +1,29 @@
+$(document).ready(function() {
+    $('.gallery_block').slick({
+        arrows: true,
+        adaptiveHeight: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        variableWidth: false,
+        responsive: [
+            {
+                breakpoint: 850,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+
+    $("#phone").mask("+375 (99) 999-99-99");
+});
+
 window.onload = function() {
 
     // valadation form 
@@ -8,42 +34,42 @@ window.onload = function() {
     let chbox = document.querySelector("#checkbox_1");
     let btn = document.querySelector(".button");
 
-    function checkingForSymbol() {
-        let symbol = phone.value.substring(0,1);
-        if (symbol == "+") {
-            let res = phone.value.substr(1);
-            return res;
-        }
-        return phone.value; 
-    }
-    console.log(checkingForSymbol()); 
+    // function checkingForSymbol() {
+    //     let symbol = phone.value.substring(0,1);
+    //     if (symbol == "+") {
+    //         let res = phone.value.substr(1);
+    //         return res;
+    //     }
+    //     return phone.value; 
+    // }
+    // console.log(checkingForSymbol()); 
 
     
-    function checkingForNumber() {
-        phoneArr = checkingForSymbol().split("");
-        let phoneNumber = [];
-        for (let i = 0; i < phoneArr.length; i++) {
-            if (!isNaN(phoneArr[i])) {
-                phoneNumber[i] = true;
-            }
-            else {
-                phoneNumber[i] = false;
-            }
-        }
-        return phoneNumber;
-    }
+    // function checkingForNumber() {
+    //     phoneArr = checkingForSymbol().split("");
+    //     let phoneNumber = [];
+    //     for (let i = 0; i < phoneArr.length; i++) {
+    //         if (!isNaN(phoneArr[i])) {
+    //             phoneNumber[i] = true;
+    //         }
+    //         else {
+    //             phoneNumber[i] = false;
+    //         }
+    //     }
+    //     return phoneNumber;
+    // }
 
-    console.log(checkingForNumber());
+    // console.log(checkingForNumber());
 
-    let otvet = true;
-    for (let i = 0; i < checkingForNumber().length; i++) {
-        if (checkingForNumber()[i] != true) {
-            otvet = false;
-            break;
-        }
-    }
+    // let otvet = true;
+    // for (let i = 0; i < checkingForNumber().length; i++) {
+    //     if (checkingForNumber()[i] != true) {
+    //         otvet = false;
+    //         break;
+    //     }
+    // }
 
-    console.log(otvet);
+    // console.log(otvet);
 
 
 
